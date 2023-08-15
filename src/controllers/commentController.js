@@ -71,6 +71,39 @@ const findOne = async (request, reply) => {
   }
 };
 
+const findAllCommentsFromUser = async (request, reply) => {
+  try {
+    const userId = request.headers.authorization;
+    if (userId == null) {
+      return await errorHandler(401, "unauthorized", true, request, reply);
+    } else {
+      const findUser = await User.findById(userId).exec();
+      if (!findUser) {
+        return await errorHandler(401, "unauthorized", true, request, reply);
+      } else {
+        const { id } = request.params;
+        const findAllComments = await Comment.find({ user: id }).exec();
+
+        if (!findAllComments) {
+          return await errorHandler(
+            404,
+            "comments-not-found",
+            true,
+            request,
+            reply,
+          );
+        }
+        await reply.code(200).send({
+          success: true,
+          data: findAllComments,
+        });
+      }
+    }
+  } catch (error) {
+    return await errorHandler(404, error, false, request, reply);
+  }
+};
+
 const createComment = async (request, reply) => {
   try {
     const userId = request.headers.authorization;
@@ -245,6 +278,7 @@ const deleteComment = async (request, reply) => {
 module.exports = {
   findAll,
   findOne,
+  findAllCommentsFromUser,
   createComment,
   updateComment,
   deleteComment,

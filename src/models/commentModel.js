@@ -27,7 +27,7 @@ const CommentSchema = new Schema(
       type: SchemaTypes.ObjectId,
       ref: "Posts",
     },
-    last_update_from_user_id: {
+    last_update_from_user: {
       type: SchemaTypes.ObjectId,
     },
   },

@@ -1,2 +1,2 @@
-docker build -t tolga60/post .
-docker push tolga60/post
+docker build -t tolga60/comment .
+docker push tolga60/comment
