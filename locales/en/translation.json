@@ -1,0 +1,13 @@
+{
+    "post-not-found": "Post not found",
+    "comment-not-created": "Comment could not created",
+    "comments-not-found": "Comments not found",
+    "comment-not-found": "Comment not found",
+    "comment-update-failed": "Update failed",
+    "user-password-update-failed": "Update password failed",
+    "email-in-use": "E-Mail is already in use",
+    "authentication-failed": "Wrong e-mail or password",
+    "user-is-banned": "User has been banned. Write an email for more information",
+    "comment-delete-failed": "Couldn't delete comment",
+    "unauthorized": "Unauthorized access"
+}

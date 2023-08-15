@@ -7,6 +7,9 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
+# For MacOS
+.DS_Store
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
@@ -24,6 +27,7 @@ coverage
 *.lcov
 
 # nyc test coverage
+.nyc
 .nyc_output
 
 # Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
@@ -74,6 +78,9 @@ web_modules/
 
 # dotenv environment variable files
 .env
+.env.test
+.env.production
+.env.development
 .env.development.local
 .env.test.local
 .env.production.local

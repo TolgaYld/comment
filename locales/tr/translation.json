@@ -1,0 +1,13 @@
+{
+    "post-not-found": "Paylaşım bulunamadı",
+    "comment-not-created": "Yorum oluşturulamadı",
+    "comments-not-found": "Yorumlar bulunamadı",
+    "comment-not-found": "Yorum bulunamadı",
+    "comment-update-failed": "Güncellemede hata oluştu",
+    "user-password-update-failed": "Şifrenin güncellenmesinde hata oluştu",
+    "email-in-use": "E-Posta adresi kullanılmaktadır",
+    "authentication-failed": "E-Posta adresi yada parola yanlış",
+    "user-is-banned": "Hesabınız erişime engellendi. Daha fazla bilgi için bir e-posta yazın",
+    "comment-delete-failed": "Yorum silinemedi",
+    "unauthorized": "İzinsiz erişim"
+}
