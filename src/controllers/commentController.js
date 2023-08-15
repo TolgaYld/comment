@@ -25,12 +25,12 @@ const findAll = async (request, reply) => {
             request,
             reply,
           );
+        } else {
+          await reply.code(200).send({
+            success: true,
+            data: findAllComments,
+          });
         }
-
-        await reply.code(200).send({
-          success: true,
-          data: findAllComments,
-        });
       }
     }
   } catch (error) {
@@ -59,11 +59,12 @@ const findOne = async (request, reply) => {
             request,
             reply,
           );
+        } else {
+          await reply.code(200).send({
+            success: true,
+            data: findOneComment,
+          });
         }
-        await reply.code(200).send({
-          success: true,
-          data: findOneComment,
-        });
       }
     }
   } catch (error) {
@@ -92,11 +93,12 @@ const findAllCommentsFromUser = async (request, reply) => {
             request,
             reply,
           );
+        } else {
+          await reply.code(200).send({
+            success: true,
+            data: findAllComments,
+          });
         }
-        await reply.code(200).send({
-          success: true,
-          data: findAllComments,
-        });
       }
     }
   } catch (error) {
@@ -262,11 +264,12 @@ const deleteComment = async (request, reply) => {
               request,
               reply,
             );
+          } else {
+            await reply.code(200).send({
+              success: true,
+              data: findComment,
+            });
           }
-          await reply.code(200).send({
-            success: true,
-            data: findComment,
-          });
         }
       }
     }
